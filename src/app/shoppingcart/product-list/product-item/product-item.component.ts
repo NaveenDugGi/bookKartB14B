@@ -10,6 +10,7 @@ import { Product } from 'src/app/model/product';
   styleUrls: ['./product-item.component.scss']
 })
 export class ProductItemComponent implements OnInit {
+  [x: string]: any;
  
  @Input()
   productItem: Product = new Product; 
@@ -17,6 +18,10 @@ export class ProductItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleAddToCart() {
+    this.msg.sendmsg(this.productItem)
   }
 
 }
