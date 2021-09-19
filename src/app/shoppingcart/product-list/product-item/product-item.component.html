@@ -1,3 +1,5 @@
+
+
 <div class="card shadow-sm "  style="background-color: rgba(251, 251, 251, 0.2)" >
     <button type="button" class="btn btn-light float-right" placeholder="Add to wishlist" >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -5,18 +7,15 @@
           </svg>
     </button>
 
-    <a href="#"><img [src]="productItem.coverFileName" /></a>
+    <a href="#"><img [src]="productItem.coverFileName" class="card-img-top" alt="{{productItem.title}}"></a>
     <div class="card-body">
         <a href="#"><strong>
-                <div class="typs">{{productItem.title}}</div>
+                <div class="type">{{productItem.title}}</div>
             </strong></a>
 
         <p class="card-text">
             <strong>Price:</strong> {{ productItem.price | currency:'INR'}}
         </p>
-
-
-
         <div class="btn-group">
             <button type="button" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
@@ -27,7 +26,5 @@
                 Add to Cart 
             </button>
         </div>
-
-
     </div>
 </div>
