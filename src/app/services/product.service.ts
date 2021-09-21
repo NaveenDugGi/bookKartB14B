@@ -5,6 +5,7 @@ import { Product } from '../model/product';
 
 const apiUrl = "https://bookcart.azurewebsites.net/api/Book";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +15,6 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {
-
     return this.http.get<Product[]>(apiUrl);
-
   }
 }

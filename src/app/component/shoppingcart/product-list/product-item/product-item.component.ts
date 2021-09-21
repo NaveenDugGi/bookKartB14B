@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/model/product';
-
+import { MessengerService } from 'src/app/services/messenger.service';
 
 
 
@@ -10,18 +10,25 @@ import { Product } from 'src/app/model/product';
   styleUrls: ['./product-item.component.scss']
 })
 export class ProductItemComponent implements OnInit {
-  [x: string]: any;
  
- @Input()
-  productItem: Product = new Product; 
+ 
+ @Input() productItem!: Product
 
-  constructor() { }
+  constructor(private msg: MessengerService) { }
 
   ngOnInit(): void {
   }
 
   handleAddToCart() {
-    this.msg.sendmsg(this.productItem)
+    this.msg.sendMsg(this.productItem)
+  }
+
+  handleRemoveFromWishlist(){
+
+  }
+
+  handleAddedToWishlist() {
+    
   }
 
 }
