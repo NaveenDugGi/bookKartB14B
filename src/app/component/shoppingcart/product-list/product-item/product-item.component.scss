@@ -1,13 +1,16 @@
 .card {
-   margin-bottom: 10px;
+   margin-bottom: 30px;
   
 }
 
 .fa-heart  {
    
-   color: rgb(122, 29, 204);
-   cursor: pointer;
-   
+   background-color: transparent;
+   border: transparent;
+   //position: absolute;
+   //z-index: 2;
+   //color:blanchedalmond;
+   //position: absolute;
 }
 .fa-heart:hover {
    color: red;
@@ -22,3 +25,20 @@
     max-width: 200px;
     cursor: pointer;
 }
+.like-button {
+   position: absolute;
+   //z-index: 2;
+   color: papayawhip;
+   font-size: 25px;
+  // text-align: right;
+   cursor: pointer;
+   border-radius: 10rem;
+   background-color: transparent;
+   border: transparent;
+   width: 99%;
+   padding-right: 10px;
+   }
+   
+   .like-button :hover {
+   color: red;
+   }

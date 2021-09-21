@@ -1,14 +1,31 @@
-.container {
-  margin-top: 400px;
+.container2 {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.container1 {
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
 
     background-color: blanchedalmond;
+
 }
 .cardHolder {
+
     display: flex;
-    margin-top: 10px;
-    margin-left: 10px;
- 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navbar-brand{
+text-align: left;
 }
