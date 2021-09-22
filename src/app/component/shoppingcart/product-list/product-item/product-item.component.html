@@ -1,7 +1,10 @@
 <div class="card shadow-sm">
 
     <div href="#" class="like-button" title="Like Button">
-        <i class="fa fa-heart float-right"></i>
+        
+        <i *ngIf="addedToWishlist" class="fa fa-heart" (click)="handleRemoveFromWishlist()"></i>
+        <i *ngIf="!addedToWishlist" class="far fa-heart" (click)="handleAddToWishlist()()"></i>
+        
     </div>
     <a href="#" [routerLink]="['/bookdetails']">
         <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)">
@@ -18,7 +21,7 @@
             <strong>Price:</strong> {{ productItem.price | currency:'INR'}}
         </p>
         <div class="btn-group">
-            <button type="button" class="btn btn-primary" (click)="handleAddToCart()">
+            <button type="button" class="btn btn-primary" (click)="handleAddToCart(productItem.bookId)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
                     viewBox="0 0 16 16">
                     <path

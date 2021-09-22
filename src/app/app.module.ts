@@ -14,6 +14,9 @@ import { FiltersComponent } from 'src/app/component/shoppingcart/filters/filters
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from 'src/app/component/shared/navbar/navbar.component';
+import { CartComponent } from './component/cart/cart.component';
+import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
+
 
 
 
@@ -25,7 +28,10 @@ import { NavbarComponent } from 'src/app/component/shared/navbar/navbar.componen
     SimilarListComponent,
     ProductItemComponent,
     FiltersComponent,
-    NavbarComponent
+    NavbarComponent,
+    CartComponent,
+    CartItemComponent,
+   
   ],
   imports: [
     BrowserModule,
